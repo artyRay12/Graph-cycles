@@ -82,12 +82,11 @@ void printCyclesWithNames(vector<string> companyList, vector<vector<int>> cycles
     for(int i = 0; i < cyclesIndex.size(); ++i)
     {
         cout << cycleNumber << ". ";
-        for(int j = 0; j < cycles[cyclesIndex[i]].size(); ++j)
+        for(int j = 0; j < cycles[cyclesIndex[i]].size() - 1; ++j)
         {
             cout << companyList[cycles[cyclesIndex[i]][j] - 1] <<"("; setBlue(); cout<< cycles[cyclesIndex[i]][j]; setWhite(); cout << ") ---> ";
         }
-        cout << companyList[cycles[i][0]] << "("; setBlue(); cout << cycles[cyclesIndex[i]][0]; setWhite(); cout << ")" << endl;
-        
+        cout << companyList[cycles[cyclesIndex[i]][0] - 1] << "("; setBlue(); cout << cycles[cyclesIndex[i]][0]; setWhite(); cout << ")" << endl;        
         cycleNumber++;
     }
 }
