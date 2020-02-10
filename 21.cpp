@@ -60,6 +60,7 @@ void dfs(int vertex, int &n, vector<int> &ribs, vector<int> &color,  vector<vect
             }
         }
     }
+    
     color[vertex] = 2;
 }
 
